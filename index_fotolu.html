@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sudee ❤️</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+overflow:hidden;height:100vh;display:flex;justify-content:center;align-items:center;
+font-family:Segoe UI,sans-serif;text-align:center;color:white;
+background:linear-gradient(-45deg,#ff4d8d,#ff85b3,#ffbfd6,#ffe6f0);
+background-size:400% 400%;animation:bg 12s ease infinite;
+}
+@keyframes bg{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.card{max-width:900px;padding:20px}
+.photo{
+width:260px;height:360px;object-fit:cover;
+border:6px solid white;border-radius:25px;
+box-shadow:0 0 25px rgba(255,255,255,.6);
+margin-bottom:20px;
+}
+h1{margin:10px 0}
+.message{font-size:1.2rem;line-height:1.8}
+.heart{position:absolute;font-size:24px;animation:float 8s linear infinite}
+@keyframes float{
+from{transform:translateY(100vh) rotate(0);opacity:1}
+to{transform:translateY(-150px) rotate(360deg);opacity:0}
+}
+</style>
+</head>
+<body>
+<div class="card">
+<img src="photo.jpg" class="photo">
+<h1>💖 Sudee 💖</h1>
+<div class="message">
+Seninle her şey daha güzel.<br><br>
+İyi ki hayatımdasın ❤️
+</div>
+</div>
+<script>
+for(let i=0;i<40;i++){
+let h=document.createElement('div');
+h.className='heart';
+h.innerHTML='❤️';
+h.style.left=Math.random()*100+'vw';
+h.style.animationDelay=Math.random()*8+'s';
+document.body.appendChild(h);
+}
+</script>
+</body>
+</html>
